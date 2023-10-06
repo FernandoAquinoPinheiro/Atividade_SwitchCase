@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenar Pessoas por Peso</title>
+</head>
+<body>
+    <div id="NomePeso"></div>
+    
+    <script>
+        let nome1 = prompt("Digite o nome da Primeira Pessoa");
+        let peso1 = Number(prompt("Digite o peso da Primeira Pessoa (em kg)"));
+        let nome2 = prompt("Digite o nome da Segunda Pessoa");
+        let peso2 = Number(prompt("Digite o peso da Segunda Pessoa (em kg)"));
+        let nome3 = prompt("Digite o nome da Terceira Pessoa");
+        let peso3 = Number(prompt("Digite o peso da Terceira Pessoa (em kg)"));
+
+        let retorno1; 
+        let retorno2;
+        let retorno3;
+
+        switch (true) {
+            case peso1 > peso2 && peso1 > peso3:
+                retorno1 = nome1 + ", Pesa: " + peso1 + " Kg";
+                if (peso2 >= peso3) {
+                    retorno2 = nome2 + ", Pesa: " + peso2 + " Kg";
+                    retorno3 = nome3 + ", Pesa: " + peso3 + " Kg";
+                } else {
+                    retorno2 = nome3 + ", Pesa: " + peso3 + " Kg";
+                    retorno3 = nome2 + ", Pesa: " + peso2 + " Kg";
+                }
+                break;
+            case peso2 > peso1 && peso2 > peso3:
+                retorno1 = nome2 + ", Pesa: " + peso2 + " Kg";
+                if (peso1 >= peso3) {
+                    retorno2 = nome1 + ", Pesa: " + peso1 + " Kg";
+                    retorno3 = nome3 + ", Pesa: " + peso3 + " Kg";
+                } else {
+                    retorno2 = nome3 + ", Pesa: " + peso3 + " Kg";
+                    retorno3 = nome1 + ", Pesa: " + peso1 + " Kg";
+                }
+                break;
+            case peso3 > peso1 && peso3 > peso2:
+                retorno1 = nome3 + ", Pesa: " + peso3 + " Kg";
+                if (peso1 >= peso2) {
+                    retorno2 = nome1 + ", Pesa: " + peso1 + " Kg";
+                    retorno3 = nome2 + ", Pesa: " + peso2 + " Kg";
+                } else {
+                    retorno2 = nome2 + ", Pesa: " + peso2 + " Kg";
+                    retorno3 = nome1 + ", Pesa: " + peso1 + " Kg";
+                }
+                break;
+            default:
+                retorno1 = nome1 + ", Pesa: " + peso1 + " Kg";
+                retorno2 = nome2 + ", Pesa: " + peso2 + " Kg";
+                retorno3 = nome3 + ", Pesa: " + peso3 + " Kg";
+        }
+
+        // Exibe os resultados na div "NomePeso"
+        document.getElementById("NomePeso").innerHTML = retorno1 + "<br>" + retorno2 + "<br>" + retorno3;
+    </script>
+</body>
+</html>
+
+

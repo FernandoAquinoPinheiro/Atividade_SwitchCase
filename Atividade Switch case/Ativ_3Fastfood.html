@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Fast Food</title>
+</head>
+
+<body>
+    <h1>Comeu Morreu </h1>
+    <h3>O melhor Fast food da região</h3>
+    <hr>
+    <h3>Seu Pedido foi Anotado:</h3>
+    <div id="resultado"></div>
+
+
+
+    <script>
+
+        let opcao = Number(prompt("Bem Vindo a Lanchonete, Comeu Morreu, Segue a baixo nosso cardapio com nossas promoções\n \nOpção (1) =  Big super Sanduba  R$ 5,00\n(Dois Hamburgueres, queijo batata e Refrigerante)\n \nOpção (2) = Quase super Sanduba R$ 3,00\n(Um Hamburguer, batata e Refrigerante)\n\nOpção (3) = Mirradus Sanduba R$ 1,50\n(Misto Quente, Refrigerante)"))
+        let retorno = '';
+
+        switch (opcao) {
+            case 1:
+                retorno = "Big super Sanduba (Dois Hamburgueres, queijo batata e Refrigerante)\nTotal R$ 5,00 ";
+                break;
+            case 2:
+                retorno = "Quase super Sanduba  (Um Hamburguer, batata e Refrigerante) \nTotal R$ 3,00 ";
+                break;
+            case 3:
+                retorno = "Mirradus Sanduba (Misto Quente, Refrigerante)\nTotal  R$ 1,50 ";
+                break;
+            default:
+                retorno = "Opção invalida";
+                break;
+        }
+        document.getElementById("resultado").innerHTML = retorno
+    </script>
+
+</body>
+
+</html>

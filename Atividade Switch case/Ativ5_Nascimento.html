@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter Data</title>
+</head>
+<body>
+    <h1>Converter Data</h1>
+    <div id="resultado"></div>
+
+    <script>
+        let inputData = prompt("Digite a data no formato DD/MM/AAAA");
+
+        // Divide a entrada em dia, mês e ano
+        let partesData = inputData.split('/');
+        let dia = partesData[0];
+        let mes = partesData[1];
+        let ano = partesData[2];
+
+        // Converte o mês para o nome do mês usando switch...case
+        let nomeMes;
+
+        switch (mes) {
+            case '01':
+                nomeMes = 'janeiro';
+                break;
+            case '02':
+                nomeMes = 'fevereiro';
+                break;
+            case '03':
+                nomeMes = 'março';
+                break;
+            case '04':
+                nomeMes = 'abril';
+                break;
+            case '05':
+                nomeMes = 'maio';
+                break;
+            case '06':
+                nomeMes = 'junho';
+                break;
+            case '07':
+                nomeMes = 'julho';
+                break;
+            case '08':
+                nomeMes = 'agosto';
+                break;
+            case '09':
+                nomeMes = 'setembro';
+                break;
+            case '10':
+                nomeMes = 'outubro';
+                break;
+            case '11':
+                nomeMes = 'novembro';
+                break;
+            case '12':
+                nomeMes = 'dezembro';
+                break;
+            default:
+                nomeMes = 'mês inválido';
+        }
+
+        // Exibe o resultado
+        alert(`${dia} de ${nomeMes} de ${ano}`);
+        document.getElementById("resultado").innerHTML =dia+" de "+ nomeMes+" de "+ano+".";
+        </script>
+</body>
+</html>
+
